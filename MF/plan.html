@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Plan My Future | MyUndiyal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm py-3">
+  <div class="container">
+    <a class="navbar-brand fw-bold text-primary fs-4" href="index.html">
+      <img src="assets/img/logo.png" alt="MyUndiyal Logo" class="me-2" style="max-height:40px;">MyUndiyal
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav ms-auto align-items-center">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="risk-profile.html">Risk Profile</a></li>
+        <li class="nav-item"><a class="nav-link active" href="plan.html">Plan My Future</a></li>
+        <li class="nav-item"><a class="nav-link" href="wealth.html">Build Wealth</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
+          <a class="btn btn-primary rounded-pill px-4" href="index.html#getStarted">Get Started</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Page Header -->
+<section class="bg-light-green py-5 text-center border-bottom">
+  <div class="container py-3">
+    <h1 class="display-5 fw-bold text-primary mb-3">Plan Your Future</h1>
+    <p class="lead text-muted mx-auto" style="max-width:680px;">Calculate the exact investments needed to achieve your life goals. Interactive calculators, real-time results.</p>
+  </div>
+</section>
+
+<!-- Main Section -->
+<section class="plan-hub-section py-5">
+  <div class="container">
+
+    <!-- PLANNER GRID -->
+    <div id="plannerGrid">
+      <div class="row g-4 justify-content-center">
+
+        <!-- SIP -->
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="planner-card" onclick="openCalc('sip')">
+            <div class="card-icon"><i class="fa-solid fa-seedling"></i></div>
+            <h5>SIP Calculator</h5>
+            <p>Calculate wealth creation through regular monthly SIP investments with compounding.</p>
+            <button class="btn-calc">Calculate</button>
+          </div>
+        </div>
+
+        <!-- SWP -->
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="planner-card" onclick="openCalc('swp')">
+            <div class="card-icon"><i class="fa-solid fa-arrow-right-arrow-left"></i></div>
+            <h5>SWP Calculator</h5>
+            <p>Plan steady monthly withdrawals from your consolidated investments over time.</p>
+            <button class="btn-calc">Calculate</button>
+          </div>
+        </div>
+
+        <!-- Bike -->
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="planner-card" onclick="openCalc('bike')">
+            <div class="card-icon"><i class="fa-solid fa-motorcycle"></i></div>
+            <h5>Bike Planner</h5>
+            <p>Rev up your savings and plan investments to buy your dream bike on time.</p>
+            <button class="btn-calc">Calculate</button>
+          </div>
+        </div>
+
+        <!-- Car -->
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="planner-card" onclick="openCalc('car')">
+            <div class="card-icon"><i class="fa-solid fa-car-side"></i></div>
+            <h5>Car Planner</h5>
+            <p>Drive your dream car — plan ahead with smart SIP investments.</p>
+            <button class="btn-calc">Calculate</button>
+          </div>
+        </div>
+
+        <!-- House -->
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="planner-card" onclick="openCalc('house')">
+            <div class="card-icon"><i class="fa-solid fa-house-chimney"></i></div>
+            <h5>House Planner</h5>
+            <p>Lay the financial foundation for your dream home with systematic planning.</p>
+            <button class="btn-calc">Calculate</button>
+          </div>
+        </div>
+
+        <!-- Marriage -->
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="planner-card" onclick="openCalc('marriage')">
+            <div class="card-icon"><i class="fa-solid fa-heart"></i></div>
+            <h5>Marriage Planner</h5>
+            <p>Plan for a grand celebration without financial stress through SIP savings.</p>
+            <button class="btn-calc">Calculate</button>
+          </div>
+        </div>
+
+        <!-- Retirement -->
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="planner-card" onclick="openCalc('retirement')">
+            <div class="card-icon"><i class="fa-solid fa-umbrella-beach"></i></div>
+            <h5>Retirement Planner</h5>
+            <p>Ensure a peaceful, financially independent retirement with the right corpus.</p>
+            <button class="btn-calc">Calculate</button>
+          </div>
+        </div>
+
+      </div>
+    </div><!-- /plannerGrid -->
+
+    <!-- CALCULATOR PANEL -->
+    <div id="calculatorPanel">
+      <div class="mb-4 mt-2">
+        <button class="back-btn" onclick="backToGrid()">
+          <i class="fa-solid fa-arrow-left"></i> Back to Planners
+        </button>
+      </div>
+
+      <!-- SIP Panel -->
+      <div id="sipPanel" class="calc-panel-card d-none">
+        <div class="calc-title"><i class="fa-solid fa-seedling me-2"></i>SIP Calculator</div>
+        <div class="row g-0">
+          <div class="col-md-5 left-col">
+            <div class="result-row"><span class="label">Maturity Value</span><span class="value" id="sipMaturity">₹0</span></div>
+            <div class="result-row"><span class="label">Total Invested</span><span class="value blue" id="sipInvested">₹0</span></div>
+            <div class="result-row"><span class="label">Gains</span><span class="value green" id="sipGains">₹0</span></div>
+            <div class="chart-box"><canvas id="sipChart"></canvas></div>
+            <div class="chart-legend">
+              <span><span class="legend-dot" style="background:#064e3b"></span>Total Investment</span>
+              <span><span class="legend-dot" style="background:#059669"></span>Gains</span>
+            </div>
+          </div>
+          <div class="col-md-7 right-col mt-4 mt-md-0">
+            <div class="slider-group">
+              <div class="slider-header">
+                <span class="slider-label">Monthly Investment</span>
+                <div class="val-box"><span>₹</span><input type="number" id="sipAmt" value="10000"></div>
+              </div>
+              <input type="range" class="mrange" id="sipAmtSlider" min="500" max="1000000" step="500" value="10000">
+            </div>
+            <div class="slider-group">
+              <div class="slider-header">
+                <span class="slider-label">Duration</span>
+                <div class="val-box"><input type="number" id="sipYrs" value="5"><span>Yrs</span></div>
+              </div>
+              <input type="range" class="mrange" id="sipYrsSlider" min="1" max="40" value="5">
+            </div>
+            <div class="slider-group">
+              <div class="slider-header">
+                <span class="slider-label">Expected Returns</span>
+                <div class="val-box"><input type="number" id="sipRate" value="12.00" step="0.5"><span>%</span></div>
+              </div>
+              <input type="range" class="mrange" id="sipRateSlider" min="1" max="30" step="0.5" value="12">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SWP Panel -->
+      <div id="swpPanel" class="calc-panel-card d-none">
+        <div class="calc-title"><i class="fa-solid fa-arrow-right-arrow-left me-2"></i>SWP Calculator</div>
+        <div class="row g-0">
+          <div class="col-md-5 left-col">
+            <div class="result-row"><span class="label">Final Portfolio Balance</span><span class="value" id="swpBalance">₹0</span></div>
+            <div class="result-row"><span class="label">Total Invested</span><span class="value blue" id="swpInvested">₹0</span></div>
+            <div class="result-row"><span class="label">Total Withdrawal</span><span class="value green" id="swpWithdrawn">₹0</span></div>
+            <div class="chart-box"><canvas id="swpChart"></canvas></div>
+            <div class="chart-legend">
+              <span><span class="legend-dot" style="background:#064e3b"></span>Portfolio Balance</span>
+            </div>
+          </div>
+          <div class="col-md-7 right-col mt-4 mt-md-0">
+            <div class="slider-group">
+              <div class="slider-header">
+                <span class="slider-label">Total Investment</span>
+                <div class="val-box"><span>₹</span><input type="number" id="swpAmt" value="5000000"></div>
+              </div>
+              <input type="range" class="mrange" id="swpAmtSlider" min="100000" max="100000000" step="100000" value="5000000">
+            </div>
+            <div class="slider-group">
+              <div class="slider-header">
+                <span class="slider-label">Withdrawal Per Month</span>
+                <div class="val-box"><span>₹</span><input type="number" id="swpWdl" value="25000"></div>
+              </div>
+              <input type="range" class="mrange" id="swpWdlSlider" min="1000" max="1000000" step="1000" value="25000">
+            </div>
+            <div class="slider-group">
+              <div class="slider-header">
+                <span class="slider-label">Expected Returns</span>
+                <div class="val-box"><input type="number" id="swpRate" value="12.00" step="0.5"><span>%</span></div>
+              </div>
+              <input type="range" class="mrange" id="swpRateSlider" min="1" max="30" step="0.5" value="12">
+            </div>
+            <div class="slider-group">
+              <div class="slider-header">
+                <span class="slider-label">Withdrawal Duration</span>
+                <div class="val-box"><input type="number" id="swpYrs" value="10"><span>Yrs</span></div>
+              </div>
+              <input type="range" class="mrange" id="swpYrsSlider" min="1" max="40" value="10">
+            </div>
+            <div class="slider-group">
+              <div class="slider-header">
+                <span class="slider-label">Waiting Period Before Withdrawal</span>
+                <div class="val-box"><input type="number" id="swpWait" value="0"><span>Yrs</span></div>
+              </div>
+              <input type="range" class="mrange" id="swpWaitSlider" min="0" max="20" value="0">
+            </div>
+            <div class="slider-group">
+              <div class="slider-header">
+                <span class="slider-label">Withdrawal Increase Rate</span>
+                <div class="val-box"><input type="number" id="swpInc" value="5.00" step="0.5"><span>%</span></div>
+              </div>
+              <input type="range" class="mrange" id="swpIncSlider" min="0" max="15" step="0.5" value="5">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- GOAL PANEL (Bike / Car / House / Marriage) -->
+      <div id="goalPanel" class="calc-panel-card d-none">
+        <div class="calc-title" id="goalTitle"><i class="fa-solid fa-motorcycle me-2"></i>Bike Planner</div>
+        <div class="row g-0">
+          <div class="col-md-5 left-col">
+            <div class="result-row"><span class="label">Goal Amount (Inflation Adj.)</span><span class="value" id="goalFutureAmt">₹0</span></div>
+            <div class="result-row"><span class="label">Current Savings Value</span><span class="value blue" id="goalSavingsVal">₹0</span></div>
+            <div class="result-row"><span class="label">Monthly SIP Required</span><span class="value green" id="goalSIP">₹0</span></div>
+            <div class="chart-box" style="position:relative">
+              <canvas id="goalChart"></canvas>
+              <div class="donut-center" id="goalCenter"></div>
+            </div>
+            <div class="chart-legend">
+              <span><span class="legend-dot" style="background:#059669"></span>Saved</span>
+              <span><span class="legend-dot" style="background:#064e3b"></span>Remaining</span>
+            </div>
+          </div>
+          <div class="col-md-7 right-col mt-4 mt-md-0">
+            <div class="slider-group">
+              <div class="slider-header">
+                <span class="slider-label" id="goalAmtLabel">Goal Amount (Today's Cost)</span>
+                <div class="val-box"><span>₹</span><input type="number" id="goalAmt" value="200000"></div>
+              </div>
+              <input type="range" class="mrange" id="goalAmtSlider" min="50000" max="50000000" step="10000" value="200000">
+            </div>
+            <div class="slider-group">
+              <div class="slider-header">
+                <span class="slider-label">Years To Goal</span>
+                <div class="val-box"><input type="number" id="goalYrs" value="3"><span>Yrs</span></div>
+              </div>
+              <input type="range" class="mrange" id="goalYrsSlider" min="1" max="30" value="3">
+            </div>
+            <div class="slider-group">
+              <div class="slider-header">
+                <span class="slider-label">Expected Return Rate</span>
+                <div class="val-box"><input type="number" id="goalRate" value="12.00" step="0.5"><span>%</span></div>
+              </div>
+              <input type="range" class="mrange" id="goalRateSlider" min="1" max="30" step="0.5" value="12">
+            </div>
+            <div class="slider-group">
+              <div class="slider-header">
+                <span class="slider-label">Inflation Rate</span>
+                <div class="val-box"><input type="number" id="goalInflation" value="6.00" step="0.5"><span>%</span></div>
+              </div>
+              <input type="range" class="mrange" id="goalInflationSlider" min="0" max="15" step="0.5" value="6">
+            </div>
+            <div class="slider-group">
+              <div class="slider-header">
+                <span class="slider-label">Current Savings (if any)</span>
+                <div class="val-box"><span>₹</span><input type="number" id="goalSavings" value="0"></div>
+              </div>
+              <input type="range" class="mrange" id="goalSavingsSlider" min="0" max="5000000" step="10000" value="0">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RETIREMENT PANEL -->
+      <div id="retirePanel" class="calc-panel-card d-none">
+        <div class="calc-title"><i class="fa-solid fa-umbrella-beach me-2"></i>Retirement Planner</div>
+        <div class="row g-0">
+          <div class="col-md-5 left-col">
+            <div class="result-row"><span class="label">Corpus Required</span><span class="value" id="retCorpus">₹0</span></div>
+            <div class="result-row"><span class="label">Value of Current Savings</span><span class="value blue" id="retSavVal">₹0</span></div>
+            <div class="result-row"><span class="label">Monthly SIP Required</span><span class="value green" id="retSIP">₹0</span></div>
+            <div class="chart-box"><canvas id="retChart"></canvas></div>
+            <div class="chart-legend">
+              <span><span class="legend-dot" style="background:#064e3b"></span>SIP Corpus</span>
+              <span><span class="legend-dot" style="background:#059669"></span>Savings Growth</span>
+            </div>
+          </div>
+          <div class="col-md-7 right-col mt-4 mt-md-0">
+            <div class="slider-group">
+              <div class="slider-header">
+                <span class="slider-label">Monthly Expense (Today)</span>
+                <div class="val-box"><span>₹</span><input type="number" id="retExpense" value="30000"></div>
+              </div>
+              <input type="range" class="mrange" id="retExpenseSlider" min="5000" max="500000" step="1000" value="30000">
+            </div>
+            <div class="slider-group">
+              <div class="slider-header">
+                <span class="slider-label">Current Age</span>
+                <div class="val-box"><input type="number" id="retCurrentAge" value="30"><span>Yrs</span></div>
+              </div>
+              <input type="range" class="mrange" id="retCurrentAgeSlider" min="18" max="60" value="30">
+            </div>
+            <div class="slider-group">
+              <div class="slider-header">
+                <span class="slider-label">Retirement Age</span>
+                <div class="val-box"><input type="number" id="retRetireAge" value="60"><span>Yrs</span></div>
+              </div>
+              <input type="range" class="mrange" id="retRetireAgeSlider" min="40" max="75" value="60">
+            </div>
+            <div class="slider-group">
+              <div class="slider-header">
+                <span class="slider-label">Life Expectancy</span>
+                <div class="val-box"><input type="number" id="retLifeAge" value="80"><span>Yrs</span></div>
+              </div>
+              <input type="range" class="mrange" id="retLifeAgeSlider" min="60" max="100" value="80">
+            </div>
+            <div class="slider-group">
+              <div class="slider-header">
+                <span class="slider-label">Expected Return (Pre-Retirement)</span>
+                <div class="val-box"><input type="number" id="retGrowRate" value="12.00" step="0.5"><span>%</span></div>
+              </div>
+              <input type="range" class="mrange" id="retGrowRateSlider" min="1" max="30" step="0.5" value="12">
+            </div>
+            <div class="slider-group">
+              <div class="slider-header">
+                <span class="slider-label">Inflation Rate</span>
+                <div class="val-box"><input type="number" id="retInflation" value="6.00" step="0.5"><span>%</span></div>
+              </div>
+              <input type="range" class="mrange" id="retInflationSlider" min="0" max="15" step="0.5" value="6">
+            </div>
+            <div class="slider-group">
+              <div class="slider-header">
+                <span class="slider-label">Current Savings</span>
+                <div class="val-box"><span>₹</span><input type="number" id="retSavings" value="0"></div>
+              </div>
+              <input type="range" class="mrange" id="retSavingsSlider" min="0" max="10000000" step="50000" value="0">
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /calculatorPanel -->
+
+    <!-- Disclaimer -->
+    <div class="mt-5 pt-2">
+      <p class="disclaimer-text">
+        Calculators are for illustrations only and do not represent actual returns.
+        Mutual Fund investments are subject to market risks; read all
+        <a href="#">scheme-related documents</a> carefully.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+        <a class="navbar-brand fw-bold text-white fs-3 d-block mb-3" href="index.html">
+          <img src="assets/img/logo.png" alt="MyUndiyal Logo" class="me-2" style="max-height:40px;">MyUndiyal
+        </a>
+        <p class="text-muted pe-lg-4">Empowering investors with simple, transparent, and goal-oriented investment strategies. Partner with us for a secure financial future.</p>
+        <div class="social-links mt-4">
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-3 col-6 mb-4 mb-md-0">
+        <h5>Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="plan.html">Plan My Future</a></li>
+          <li><a href="wealth.html">Build Wealth</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-2 col-md-3 col-6 mb-4 mb-md-0">
+        <h5>Tools &amp; Resources</h5>
+        <ul class="list-unstyled">
+          <li><a href="risk-profile.html">Risk Profile Test</a></li>
+          <li><a href="plan.html">SIP Calculator</a></li>
+          <li><a href="plan.html">Goal Planners</a></li>
+          <li><a href="wealth.html">Investment Guide</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-md-6 col-12 mb-4 mb-md-0">
+        <h5>Contact Us</h5>
+        <ul class="list-unstyled text-muted">
+          <li class="mb-2"><i class="fa-solid fa-location-dot me-2 text-secondary"></i>South Ukkadam, Coimbatore 641001</li>
+          <li class="mb-2"><i class="fa-solid fa-phone me-2 text-secondary"></i>+91 81110 79681</li>
+          <li class="mb-3"><i class="fa-solid fa-envelope me-2 text-secondary"></i>myundiyal@gmail.com</li>
+          <li>
+            <a href="https://wa.me/918111079681" class="btn btn-outline-success btn-sm w-100 py-2 border-0" style="background:#25D366;color:white;" target="_blank">
+              <i class="fa-brands fa-whatsapp fs-5 me-2 align-middle"></i>Chat on WhatsApp
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-2 col-md-6 col-12">
+        <h5>Legal</h5>
+        <ul class="list-unstyled">
+          <li class="mb-2"><a href="terms-conditions.html" class="text-decoration-none text-muted">Terms &amp; Conditions</a></li>
+          <li><a href="privacy-policy.html" class="text-decoration-none text-muted">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <hr class="mt-5 mb-4 border-secondary">
+    <div class="row align-items-center">
+      <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+        <p class="mb-0 text-muted small">&copy; 2026 MyUndiyal Mutual Funds Distributor. All Rights Reserved.</p>
+      </div>
+      <div class="col-md-6 text-center text-md-end">
+        <p class="mb-0 text-muted small">AMFI Registered Mutual Fund Distributor. Mutual Fund investments are subject to market risks, read all scheme related documents carefully.<br>
+          <a href="terms-conditions.html" class="text-muted text-decoration-none">Terms &amp; Conditions</a> |
+          <a href="privacy-policy.html" class="text-muted text-decoration-none">Privacy Policy</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

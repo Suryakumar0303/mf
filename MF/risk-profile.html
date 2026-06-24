@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Risk Profile | MyUndiyal Mutual Funds Distributor</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm py-3">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-primary fs-4" href="index.html">
+                <img src="assets/img/logo.png" alt="MyUndiyal Logo" class="me-2" style="max-height: 40px;">MyUndiyal
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="risk-profile.html">Risk Profile</a></li>
+                    <li class="nav-item"><a class="nav-link" href="plan.html">Plan My Future</a></li>
+                    <li class="nav-item"><a class="nav-link" href="wealth.html">Build Wealth</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
+                        <a class="btn btn-primary rounded-pill px-4" href="index.html#getStarted">Get Started</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="bg-light-green py-5 text-center border-bottom">
+        <div class="container py-4">
+            <h1 class="display-4 fw-bold text-primary mb-3">Discover Your Investment Personality</h1>
+            <p class="lead text-muted max-w-700 mx-auto">Answer a few simple questions and receive a personalized investment plan from our investment mentor.</p>
+        </div>
+    </section>
+
+    <!-- Content -->
+    <section class="py-5 my-4">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-5">
+                    <div class="sticky-top" style="top: 100px; z-index: 1;">
+                        <h3 class="fw-bold mb-4">What is a Risk Profile?</h3>
+                        <p class="text-muted">A risk profile determines your capacity and willingness to endure financial risk. It is influenced by your age, financial goals, time horizon, and personal comfort with market volatility.</p>
+                        <p class="text-muted mb-4">Knowing your risk profile is an essential first step before making any investment. We categorize investors into three simple profiles:</p>
+                        
+                        <div class="d-flex align-items-start mb-3">
+                            <span class="badge bg-primary me-3 mt-1 px-2 py-2"><i class="fa-solid fa-shield"></i></span>
+                            <div>
+                                <h6 class="fw-bold mb-1">Conservative Investor</h6>
+                                <p class="text-muted small mb-0">Prioritizes capital protection over high growth.</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-start mb-3">
+                            <span class="badge bg-secondary me-3 mt-1 px-2 py-2"><i class="fa-solid fa-scale-balanced"></i></span>
+                            <div>
+                                <h6 class="fw-bold mb-1">Moderate Investor</h6>
+                                <p class="text-muted small mb-0">Seeks a balance between risk and reward.</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-start mb-3">
+                            <span class="badge bg-danger me-3 mt-1 px-2 py-2"><i class="fa-solid fa-rocket"></i></span>
+                            <div>
+                                <h6 class="fw-bold mb-1">Aggressive Investor</h6>
+                                <p class="text-muted small mb-0">Wants maximum wealth creation and accepts high volatility.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="contact-form-wrapper" id="quizContainer">
+                        <h4 class="mb-4 text-primary"><i class="fa-solid fa-clipboard-question me-2"></i> Assessment Questionnaire</h4>
+                        <<form id="riskForm">
+                            <!-- Group 1: Personal Information -->
+                            <div class="mb-4 risk-step active" id="step-0">
+                                <h5 class="fw-bold text-primary border-bottom pb-2"><i class="fa-solid fa-user-circle me-2"></i>1. Personal Information</h5>
+                                <div class="row g-3 mt-2">
+                                    <div class="col-md-6">
+                                        <label class="form-label text-dark fw-semibold">Full Name <span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" id="rpName" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label text-dark fw-semibold">Phone Number <span class="text-danger">*</span></label>
+                                        <input type="tel" class="form-control" id="rpPhone" required>
+                                    </div>
+                                    <div class="col-12 mt-2">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="rpSamePhone" onchange="if(this.checked){document.getElementById('rpWhatsapp').value=document.getElementById('rpPhone').value; document.getElementById('rpWhatsapp').disabled=true;}else{document.getElementById('rpWhatsapp').disabled=false;}">
+                                            <label class="form-check-label text-muted small" for="rpSamePhone">WhatsApp is same as Phone Number</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mt-2">
+                                        <label class="form-label text-dark fw-semibold">WhatsApp Number</label>
+                                        <input type="tel" class="form-control" id="rpWhatsapp">
+                                    </div>
+                                    <div class="col-md-6 mt-2">
+                                        <label class="form-label text-dark fw-semibold">City / Location <span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" id="rpCity" required>
+                                    </div>
+                                    <div class="col-12 mt-4 text-end">
+                                        <button type="button" class="btn btn-primary px-4 py-2 rounded-pill shadow-sm" onclick="nextStep(1)">Next <i class="fa-solid fa-arrow-right ms-2"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Group 2: Questions 1 to 4 -->
+                            <div class="mb-4 risk-step" id="step-1">
+                                <h5 class="fw-bold text-primary border-bottom pb-2 mb-4"><i class="fa-solid fa-clipboard-list me-2"></i>2. Financial Profile (Part 1)</h5>
+                                <div class="row g-4">
+                                    <!-- Question 1 -->
+                                    <div class="col-md-6">
+                                        <div class="bg-light p-4 rounded-3 shadow-sm border-start border-primary border-4 h-100">
+                                            <label class="fw-bold mb-3 d-block text-dark">1. How old are you?</label>
+                                            <div class="form-check mb-2">
+                                                <input class="form-check-input" type="radio" name="q1" value="4" required id="q1a">
+                                                <label class="form-check-label text-muted" for="q1a">Under 25 years</label>
+                                            </div>
+                                            <div class="form-check mb-2">
+                                                <input class="form-check-input" type="radio" name="q1" value="3" id="q1b">
+                                                <label class="form-check-label text-muted" for="q1b">25 – 35 years</label>
+                                            </div>
+                                            <div class="form-check mb-2">
+                                                <input class="form-check-input" type="radio" name="q1" value="2" id="q1c">
+                                                <label class="form-check-label text-muted" for="q1c">35 – 50 years</label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="q1" value="1" id="q1d">
+                                                <label class="form-check-label text-muted" for="q1d">Above 50 years</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Question 2 -->
+                                    <div class="col-md-6">
+                                        <div class="bg-light p-4 rounded-3 shadow-sm border-start border-primary border-4 h-100">
+                                            <label class="fw-bold mb-3 d-block text-dark">2. What is your monthly income?</label>
+                                            <div class="form-check mb-2">
+                                                <input class="form-check-input" type="radio" name="q2" value="1" required id="q2a">
+                                                <label class="form-check-label text-muted" for="q2a">Below ₹25,000</label>
+                                            </div>
+                                            <div class="form-check mb-2">
+                                                <input class="form-check-input" type="radio" name="q2" value="2" id="q2b">
+                                                <label class="form-check-label text-muted" for="q2b">₹25,000 – ₹75,000</label>
+                                            </div>
+                                            <div class="form-check mb-2">
+                                                <input class="form-check-input" type="radio" name="q2" value="3" id="q2c">
+                                                <label class="form-check-label text-muted" for="q2c">₹75,000 – ₹2 Lakh</label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="q2" value="4" id="q2d">
+                                                <label class="form-check-label text-muted" for="q2d">Above ₹2 Lakh</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Question 3 -->
+                                    <div class="col-md-6">
+                                        <div class="bg-light p-4 rounded-3 shadow-sm border-start border-primary border-4 h-100">
+                                            <label class="fw-bold mb-3 d-block text-dark">3. How much do you save every month?</label>
+                                            <div class="form-check mb-2">
+                                                <input class="form-check-input" type="radio" name="q3" value="1" required id="q3a">
+                                                <label class="form-check-label text-muted" for="q3a">I spend everything 😅</label>
+                                            </div>
+                                            <div class="form-check mb-2">
+                                                <input class="form-check-input" type="radio" name="q3" value="2" id="q3b">
+                                                <label class="form-check-label text-muted" for="q3b">Save less than 10%</label>
+                                            </div>
+                                            <div class="form-check mb-2">
+                                                <input class="form-check-input" type="radio" name="q3" value="3" id="q3c">
+                                                <label class="form-check-label text-muted" for="q3c">Save 10–20%</label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="q3" value="4" id="q3d">
+                                                <label class="form-check-label text-muted" for="q3d">Save more than 20%</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Question 4 -->
+                                    <div class="col-md-6">
+                                        <div class="bg-light p-4 rounded-3 shadow-sm border-start border-primary border-4 h-100">
+                                            <label class="fw-bold mb-3 d-block text-dark">4. If your investment drops by 20%, what do you do?</label>
+                                            <div class="form-check mb-2">
+                                                <input class="form-check-input" type="radio" name="q4" value="1" required id="q4a">
+                                                <label class="form-check-label text-muted" for="q4a">Panic and sell immediately 😱</label>
+                                            </div>
+                                            <div class="form-check mb-2">
+                                                <input class="form-check-input" type="radio" name="q4" value="2" id="q4b">
+                                                <label class="form-check-label text-muted" for="q4b">Feel worried but wait</label>
+                                            </div>
+                                            <div class="form-check mb-2">
+                                                <input class="form-check-input" type="radio" name="q4" value="3" id="q4c">
+                                                <label class="form-check-label text-muted" for="q4c">Stay calm and hold</label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="q4" value="4" id="q4d">
+                                                <label class="form-check-label text-muted" for="q4d">Invest more! Great opportunity 🤑</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="text-end mt-4 border-top pt-3">
+                                    <button type="button" class="btn btn-outline-secondary px-4 py-2 rounded-pill shadow-sm me-2" onclick="nextStep(0)"><i class="fa-solid fa-arrow-left me-2"></i>Back</button>
+                                    <button type="button" class="btn btn-primary px-4 py-2 rounded-pill shadow-sm" onclick="nextStep(2)">Next <i class="fa-solid fa-arrow-right ms-2"></i></button>
+                                </div>
+                            </div>
+                            
+                            <!-- Group 3: Questions 5 to 7 -->
+                            <div class="mb-4 risk-step" id="step-2">
+                                <h5 class="fw-bold text-primary border-bottom pb-2 mb-4"><i class="fa-solid fa-chart-line me-2"></i>3. Financial Profile (Part 2)</h5>
+                                <div class="row g-4">
+                                    <!-- Question 5 -->
+                                    <div class="col-md-6">
+                                        <div class="bg-light p-4 rounded-3 shadow-sm border-start border-primary border-4 h-100">
+                                            <label class="fw-bold mb-3 d-block text-dark">5. How long can you keep your money invested?</label>
+                                            <div class="form-check mb-2">
+                                                <input class="form-check-input" type="radio" name="q5" value="1" required id="q5a">
+                                                <label class="form-check-label text-muted" for="q5a">Less than 1 year</label>
+                                            </div>
+                                            <div class="form-check mb-2">
+                                                <input class="form-check-input" type="radio" name="q5" value="2" id="q5b">
+                                                <label class="form-check-label text-muted" for="q5b">1 – 3 years</label>
+                                            </div>
+                                            <div class="form-check mb-2">
+                                                <input class="form-check-input" type="radio" name="q5" value="3" id="q5c">
+                                                <label class="form-check-label text-muted" for="q5c">3 – 7 years</label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="q5" value="4" id="q5d">
+                                                <label class="form-check-label text-muted" for="q5d">7+ years (Long Term)</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Question 6 -->
+                                    <div class="col-md-6">
+                                        <div class="bg-light p-4 rounded-3 shadow-sm border-start border-primary border-4 h-100">
+                                            <label class="fw-bold mb-3 d-block text-dark">6. What is your main investment goal?</label>
+                                            <div class="form-check mb-2">
+                                                <input class="form-check-input" type="radio" name="q6" value="1" required id="q6a">
+                                                <label class="form-check-label text-muted" for="q6a">Keep money safe (No Loss)</label>
+                                            </div>
+                                            <div class="form-check mb-2">
+                                                <input class="form-check-input" type="radio" name="q6" value="2" id="q6b">
+                                                <label class="form-check-label text-muted" for="q6b">Regular steady income</label>
+                                            </div>
+                                            <div class="form-check mb-2">
+                                                <input class="form-check-input" type="radio" name="q6" value="3" id="q6c">
+                                                <label class="form-check-label text-muted" for="q6c">Grow money over time</label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="q6" value="4" id="q6d">
+                                                <label class="form-check-label text-muted" for="q6d">Maximum growth possible</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Question 7 -->
+                                    <div class="col-md-12">
+                                        <div class="bg-light p-4 rounded-3 shadow-sm border-start border-primary border-4">
+                                            <label class="fw-bold mb-3 d-block text-dark">7. Have you invested before?</label>
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <div class="form-check mb-2">
+                                                        <input class="form-check-input" type="radio" name="q7" value="1" required id="q7a">
+                                                        <label class="form-check-label text-muted" for="q7a">Never – Complete Beginner</label>
+                                                    </div>
+                                                    <div class="form-check mb-2">
+                                                        <input class="form-check-input" type="radio" name="q7" value="2" id="q7b">
+                                                        <label class="form-check-label text-muted" for="q7b">Yes, in FD or Savings</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <div class="form-check mb-2">
+                                                        <input class="form-check-input" type="radio" name="q7" value="3" id="q7c">
+                                                        <label class="form-check-label text-muted" for="q7c">Yes, in Mutual Funds</label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="q7" value="4" id="q7d">
+                                                        <label class="form-check-label text-muted" for="q7d">Yes, in Stocks and More</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="text-end mt-4 border-top pt-3 d-flex justify-content-between align-items-center">
+                                    <button type="button" class="btn btn-outline-secondary px-4 py-2 rounded-pill shadow-sm" onclick="nextStep(1)"><i class="fa-solid fa-arrow-left me-2"></i>Back</button>
+                                    <button type="submit" class="btn btn-primary px-5 py-3 rounded-pill fw-bold text-uppercase tracking-wide shadow">Calculate My Risk Profile <i class="fa-solid fa-arrow-right ms-2"></i></button>
+                                </div>
+                            </div>
+                            
+                            <!-- Trust badges -->
+                            <div class="d-flex justify-content-between text-muted small mt-4 mb-3 align-items-center flex-wrap gap-2 text-center text-md-start">
+                                <span><i class="fa-solid fa-lock text-primary me-1"></i> Secure & Confidential</span>
+                                <span><i class="fa-solid fa-gift text-primary me-1"></i> Free Assessment</span>
+                                <span><i class="fa-solid fa-user-tie text-primary me-1"></i> Personalized Guidance</span>
+                            </div>
+
+                        </form>
+                    </div>
+
+                    <!-- Results Section (Hidden by Default) -->
+                    <div id="resultContainer" class="d-none">
+                        <div class="card border-0 shadow-lg rounded-4 overflow-hidden text-center mb-4">
+                            <div class="card-header bg-primary text-white py-4">
+                                <h3 class="mb-0 fw-bold">Your Investment Personality</h3>
+                            </div>
+                            <div class="card-body p-4 p-md-5">
+                                <span class="badge bg-light text-dark border mb-3 px-3 py-2 fs-6 rounded-pill shadow-sm">Based on your responses</span>
+                                <h2 class="text-dark mb-3">You are a <br><span id="profileName" class="text-primary fw-bold display-6"></span></h2>
+                                <hr class="w-25 mx-auto border-secondary mb-4 opacity-25">
+                                <p id="profileDesc" class="text-muted mb-4 fs-5"></p>
+                                
+                                <div class="bg-light p-4 rounded-3 text-start mb-4 border-start border-4 border-primary">
+                                    <h5 class="fw-bold text-primary mb-3"><i class="fa-solid fa-lightbulb text-warning me-2"></i> Recommended Approach:</h5>
+                                    <ul id="fundSuggestions" class="text-muted list-unstyled mb-0 align-left ps-2">
+                                        <!-- Populated via JS -->
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- WhatsApp Lead Generation Section -->
+                        <div class="card border-0 shadow-lg rounded-4 overflow-hidden mb-4 bg-light-green border border-primary border-opacity-25">
+                            <div class="card-body p-4 p-md-5 text-center">
+                                <div class="mb-4">
+                                    <i class="fa-brands fa-whatsapp text-success display-4 mb-3"></i>
+                                    <h3 class="fw-bold text-dark">Get Your Personalized Investment Plan</h3>
+                                    <p class="text-muted max-w-600 mx-auto">Our investment mentor will review your risk profile and provide a customized investment strategy tailored to your goals and financial situation.</p>
+                                </div>
+                                
+                                <button id="waBtn" class="btn btn-success btn-lg px-4 py-3 rounded-pill shadow-sm w-100 fw-bold fs-5 text-white" style="background-color: #25D366; border-color: #25D366;">
+                                    <i class="fa-brands fa-whatsapp me-2 fs-4 align-middle"></i> Get My Personalized Investment Plan
+                                </button>
+                                
+                                <p class="small text-muted mt-3 mb-0"><i class="fa-solid fa-bolt text-warning me-1"></i> Quick & Free consultation via WhatsApp</p>
+                            </div>
+                        </div>
+
+                        <div class="text-center mt-4">
+                            <button id="retakeBtn" class="btn btn-outline-secondary py-2 px-4 rounded-pill shadow-sm">Retake Assessment</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <a class="navbar-brand fw-bold text-white fs-3 d-block mb-3" href="index.html">
+                        <img src="assets/img/logo.png" alt="MyUndiyal Logo" class="me-2" style="max-height: 40px;">MyUndiyal
+                    </a>
+                    <p class="text-muted pe-lg-4">Empowering investors with simple, transparent, and goal-oriented investment strategies. Partner with us for a secure financial future.</p>
+                    <div class="social-links mt-4">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-6 mb-4 mb-md-0">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html">Home</a></li>
+                                                <li><a href="about.html">About Us</a></li>
+                        <li><a href="plan.html">Plan My Future</a></li>
+                        <li><a href="wealth.html">Build Wealth</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-3 col-6 mb-4 mb-md-0">
+                    <h5>Tools & Resources</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="risk-profile.html">Risk Profile Test</a></li>
+                        <li><a href="plan.html#sipCalculator">SIP Calculator</a></li>
+                        <li><a href="plan.html#goalCalculator">Goal Calculator</a></li>
+                        <li><a href="wealth.html">Investment Guide</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12 mb-4 mb-md-0">
+                    <h5>Contact Us</h5>
+                    <ul class="list-unstyled text-muted">
+                        <li class="mb-2"><i class="fa-solid fa-location-dot me-2 text-secondary"></i> South Ukkadam, Coimbatore 641001</li>
+                        <li class="mb-2"><i class="fa-solid fa-phone me-2 text-secondary"></i> +91 81110 79681</li>
+                        <li class="mb-3"><i class="fa-solid fa-envelope me-2 text-secondary"></i> myundiyal@gmail.com</li>
+                        <li>
+                            <a href="https://wa.me/918111079681" class="btn btn-outline-success btn-sm w-100 py-2 border-0" style="background:#25D366; color:white;" target="_blank">
+                                <i class="fa-brands fa-whatsapp fs-5 me-2 align-middle"></i> Chat on WhatsApp
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Legal -->
+                <div class="col-lg-2 col-md-6 col-12">
+                    <h5>Legal</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="terms-conditions.html" class="text-decoration-none text-muted hover-primary">Terms & Conditions</a></li>
+                        <li><a href="privacy-policy.html" class="text-decoration-none text-muted hover-primary">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="mt-5 mb-4 border-secondary">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    <p class="mb-0 text-muted small">&copy; 2026 MyUndiyal Mutual Funds Distributor. All Rights Reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="mb-0 text-muted small">AMFI Registered Mutual Fund Distributor. Mutual Fund investments are subject to market risks, read all scheme related documents carefully.<br><a href="#" class="text-muted text-decoration-none">Terms & Conditions</a> | <a href="#" class="text-muted text-decoration-none">Privacy Policy</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    
+    <!-- Bootstrap & JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
